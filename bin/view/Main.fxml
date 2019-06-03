@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <content>
+      <BorderPane prefHeight="800.0" prefWidth="1000.0">
+         <center>
+            <FlowPane fx:id="fp" hgap="50.0" prefHeight="800.0" prefWidth="800.0" prefWrapLength="800.0" vgap="50.0" BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+               </padding></FlowPane>
+         </center>
+         <top>
+            <MenuBar fx:id="menubar" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#homePage" text="HomePage" />
+                        <MenuItem mnemonicParsing="false" onAction="#menuSave" text="Save" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#dataImport" text="Import" />
+                        <MenuItem mnemonicParsing="false" onAction="#dataExport" text="Export" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                    <MenuItem mnemonicParsing="false" onAction="#Close" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#menuAdd" text="Add" />
+                        <MenuItem mnemonicParsing="false" onAction="#menuRent" text="Rent" />
+                        <MenuItem mnemonicParsing="false" onAction="#menuReturn" text="Return" />
+                        <MenuItem mnemonicParsing="false" onAction="#menuPerform" text="Maintain" />
+                        <MenuItem mnemonicParsing="false" onAction="#menuComplete" text="Complete" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <left>
+            <Pane fx:id="pane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ComboBox fx:id="cbType" layoutX="25.0" layoutY="220.0" prefWidth="150.0" />
+                  <ComboBox fx:id="cbRooms" layoutX="25.0" layoutY="290.0" prefWidth="150.0" />
+                  <ComboBox fx:id="cbStatus" layoutX="25.0" layoutY="360.0" prefWidth="150.0" />
+                  <Button layoutX="70.0" layoutY="487.0" mnemonicParsing="false" onAction="#goSearch" text="Search" />
+                  <Label layoutX="25.0" layoutY="197.0" text="Type">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="267.0" text="Rooms">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="337.0" text="Status">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cbSuburb" layoutX="25.0" layoutY="430.0" prefWidth="150.0" />
+                  <Label layoutX="25.0" layoutY="407.0" text="Suburb">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </left>
+      </BorderPane>
+   </content>
+</ScrollPane>

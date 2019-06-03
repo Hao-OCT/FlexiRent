@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReturnController">
+   <content>
+      <Pane prefHeight="600.0" prefWidth="400.0">
+         <children>
+            <Label layoutX="110.0" layoutY="61.0" text="Return Property">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="130.0" text="Property ID:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="170.0" text="Return Date:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="endDate" layoutX="190.0" layoutY="170.0" />
+            <Button layoutX="107.0" layoutY="273.0" mnemonicParsing="false" onAction="#goNext" text="Next" />
+            <Button layoutX="251.0" layoutY="273.0" mnemonicParsing="false" onAction="#goBack" text="Back" />
+            <Label fx:id="output" layoutX="42.0" layoutY="34.0" textFill="RED">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cbPID" layoutX="190.0" layoutY="130.0" prefWidth="150.0" />
+         </children></Pane>
+   </content>
+</ScrollPane>
