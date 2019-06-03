@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddController">
+   <content>
+      <Pane prefHeight="600.0" prefWidth="400.0">
+         <children>
+            <Label layoutX="122.0" layoutY="61.0" text="Add Property">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="130.0" text="Property Type:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="type" layoutX="200.0" layoutY="130.0" prefWidth="150.0" />
+            <Label layoutX="35.0" layoutY="170.0" text="Street Number:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="streetNum" layoutX="200.0" layoutY="170.0" />
+            <TextField fx:id="streetName" layoutX="200.0" layoutY="210.0" />
+            <Label layoutX="35.0" layoutY="210.0" text="Street Name:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="250.0" text="Suburb:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="suburb" layoutX="200.0" layoutY="250.0" />
+            <TextField fx:id="numofRooms" layoutX="200.0" layoutY="290.0" />
+            <Label layoutX="35.0" layoutY="290.0" text="*Number of Rooms:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="330.0" text="#Last Maintenance:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="lastDate" layoutX="200.0" layoutY="330.0" />
+            <Label layoutX="35.0" layoutY="493.0" maxWidth="140.0" text="* is only for Apartment # is only for Suite" wrapText="true" />
+            <Button layoutX="114.0" layoutY="545.0" mnemonicParsing="false" onAction="#goNext" text="Next" />
+            <Button layoutX="234.0" layoutY="545.0" mnemonicParsing="false" onAction="#goBack" text="Back" />
+            <Label layoutX="35.0" layoutY="370.0" text="Picture:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="430.0" text="Description:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="desc" layoutX="200.0" layoutY="430.0" prefHeight="63.0" prefWidth="179.0" />
+            <Button fx:id="btnFileChooser" layoutX="200.0" layoutY="370.0" mnemonicParsing="false" onAction="#fileChoose" text="File Chooser">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="labelFilePath" layoutX="200.0" layoutY="405.0" />
+            <Label fx:id="output" layoutX="30.0" layoutY="35.0" textFill="RED">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </content>
+</ScrollPane>
